@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1 class="light-blue-text center-align">Todos os Voos</h1>
+    <ul class="collection container z-depth-2" style="border-radius:2vmin">
+        {% for flight in flights %}            
+            <a href="/flightDetails/{{flight.id}}" class="collection-item">                
+                <span> <i class="material-icons">airplanemode_active</i> {{ flight.origin }} - {{flight.destination }}</span>
+            </a>            
+        {% endfor %} 
+    </ul>
+{% endblock %}  

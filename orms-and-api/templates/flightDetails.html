@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s12 m6 z-depth-2" style="border-radius: 2vmin;margin-left:20vmin">
+            <div class="card white z-depth-0">
+                {% for flight in flights%}
+                    <div class="card-content blue-text">
+                        <h3>{{flight.origin}} - {{flight.destination}}</h3>
+                        <br>
+                        <div class="">
+                            <h5>Origem: </h5>
+                            <h6 class="light-blue-text">{{flight.origin}}</h6>
+                            <h5>Destino: </h5>
+                            <h6 class="light-blue-text">{{flight.destination}}</h6>
+                            <h5>Duração: </h5>
+                            <h6 class="light-blue-text">{{flight.duration}}</h6>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="blue-text">Excluir</a>
+                        <a href="#" class="blue-text">Editar</a>
+                    </div>
+                {% endfor %}    
+            </div>
+            <ul class="collection container z-depth-2" style="border-radius:2vmin"></ul>
+                {% for passenger in passengers %}
+                    <a href="" class="collection-item">
+                        <span> <i class="material-icons">person</i> {{ passenger.id }} - {{ passenger.name }}</span>
+                    </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

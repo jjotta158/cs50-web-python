@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirDrop Voos</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified JavaScript -->
+    
+</head>
+<body>
+    <header>
+        <nav class="light-blue">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">AirDrop Voos</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="/flights">Todos os Voos</a></li>
+                    <li><a href="/addFlightForm">Novo voo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top:15vmin">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>
